@@ -93,7 +93,7 @@ client.on('InteractionCreate', async (interaction) => {
 });
 
 // Check threads every at 0 minute every hour
-cron.schedule('*/1 * * * *', async () => {
+cron.schedule('* */48 * * *', async () => {
 	const hoursForInactive = 48;
  
 	const guild = await client.guilds.fetch(serverId);
